@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.Utility;
 import com.example.credit.card.Card;
 import com.example.credit.repository.CardRepository;
 
@@ -22,7 +23,12 @@ public class CardServiceImpl implements CardService{
 
 	@Override
 	public Card addCard(Card card) {
-		return cardRepository.saveAndFlush(card);
+		if(Utility.isValidCard(card.getNumber())) {
+			return cardRepository.saveAndFlush(card);
+		}else {
+			//TODO - throw invalid card exception
+			return null;
+		}
 	}
 
 	@Override
