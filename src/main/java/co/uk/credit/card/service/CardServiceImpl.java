@@ -1,4 +1,4 @@
-package com.example.credit.service;
+package co.uk.credit.card.service;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Utility;
-import com.example.credit.card.Card;
-import com.example.credit.exception.InvalidCardNumberException;
-import com.example.credit.repository.CardRepository;
+import co.uk.credit.card.Utility;
+import co.uk.credit.card.exception.InvalidCardNumberException;
+import co.uk.credit.card.model.Card;
+import co.uk.credit.card.repository.CardRepository;
 
 /**
  * @author charu

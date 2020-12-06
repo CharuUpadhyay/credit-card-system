@@ -1,4 +1,4 @@
-package com.example.credit.card;
+package co.uk.credit.card.model;
 
 public class Response {
 	private String status;

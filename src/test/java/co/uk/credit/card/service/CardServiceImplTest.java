@@ -1,4 +1,4 @@
-package com.example.credit.service;
+package co.uk.credit.card.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -17,8 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.example.credit.card.Card;
-import com.example.credit.repository.CardRepository;
+import co.uk.credit.card.model.Card;
+import co.uk.credit.card.repository.CardRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest

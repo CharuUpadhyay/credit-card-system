@@ -1,4 +1,4 @@
-package com.example;
+package co.uk.credit.card;
 
 public final class Utility {
 

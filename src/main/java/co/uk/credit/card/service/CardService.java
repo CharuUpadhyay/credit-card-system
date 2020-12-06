@@ -1,8 +1,8 @@
-package com.example.credit.service;
+package co.uk.credit.card.service;
 
 import java.util.List;
 
-import com.example.credit.card.Card;
+import co.uk.credit.card.model.Card;
 
 public interface CardService {
 	public List<Card> findAllCards();

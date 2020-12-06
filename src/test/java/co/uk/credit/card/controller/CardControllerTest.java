@@ -1,4 +1,4 @@
-package com.example.credit.controller;
+package co.uk.credit.card.controller;
 
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.when;
@@ -21,9 +21,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.example.credit.card.Card;
-import com.example.credit.service.CardService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import co.uk.credit.card.model.Card;
+import co.uk.credit.card.service.CardService;
 
 @AutoConfigureMockMvc
 @RunWith(SpringRunner.class)

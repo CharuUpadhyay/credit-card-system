@@ -1,4 +1,4 @@
-package com.example.credit.card;
+package co.uk.credit.card.model;
 
 import java.math.BigDecimal;
 

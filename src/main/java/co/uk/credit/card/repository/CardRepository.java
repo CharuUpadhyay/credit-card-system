@@ -1,9 +1,9 @@
-package com.example.credit.repository;
+package co.uk.credit.card.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.credit.card.Card;
+import co.uk.credit.card.model.Card;
 
 @Repository
 public interface CardRepository extends JpaRepository<Card, Long>{

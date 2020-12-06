@@ -1,4 +1,4 @@
-package com.example.credit.exception;
+package co.uk.credit.card.exception;
 
 public class InvalidCardNumberException extends RuntimeException {
 

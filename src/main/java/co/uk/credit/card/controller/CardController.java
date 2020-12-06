@@ -1,4 +1,4 @@
-package com.example.credit.controller;
+package co.uk.credit.card.controller;
 
 import java.util.List;
 
@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.credit.card.Card;
-import com.example.credit.card.FetchCardsResponse;
-import com.example.credit.card.Response;
-import com.example.credit.service.CardService;
-
+import co.uk.credit.card.model.Card;
+import co.uk.credit.card.model.FetchCardsResponse;
+import co.uk.credit.card.model.Response;
+import co.uk.credit.card.service.CardService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
