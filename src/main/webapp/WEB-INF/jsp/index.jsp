@@ -142,7 +142,7 @@ $(document).ready(	function() {
 						  if(data.status == 'SUCCESS'){
 							  $.each(data.cards, function( index, value ) {
 								  console.log( value.name);
-									$("#existinCard tr:last").after('<tr><td>' + value.name + '</td><td>'+value.number+'</td><td>'+ '$' + value.balance+'</td><td>'+'$' +value.creditLimit+'</td></tr>');
+									$("#existinCard tr:last").after('<tr><td>' + value.name + '</td><td>'+value.number+'</td><td>'+ '£' + value.balance+'</td><td>'+'£' +value.creditLimit+'</td></tr>');
 	
 								});
 						  }
