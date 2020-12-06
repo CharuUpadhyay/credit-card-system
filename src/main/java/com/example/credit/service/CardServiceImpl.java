@@ -1,39 +1,53 @@
 package com.example.credit.service;
 
+import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.Utility;
 import com.example.credit.card.Card;
+import com.example.credit.exception.InvalidCardNumberException;
 import com.example.credit.repository.CardRepository;
 
+/**
+ * @author charu
+ *
+ */
 @Service
 public class CardServiceImpl implements CardService{
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	CardRepository cardRepository;
 	
 	@Override
 	public List<Card> findAllCards() {
-		return cardRepository.findAll();
+		try {
+			logger.debug("Fetching existing cards.");
+			return cardRepository.findAll();
+		}catch(Exception e) {
+			logger.error("Exception occurred while fetching card detail - " + e);
+		}
+		return null;
 	}
 
 	@Override
 	public Card addCard(Card card) {
-		if(Utility.isValidCard(card.getNumber())) {
-			return cardRepository.saveAndFlush(card);
-		}else {
-			//TODO - throw invalid card exception
-			return null;
+		try {
+			logger.debug("Adding new card");
+			if(Utility.isValidCard(card.getNumber())) {
+				card.setBalance(new BigDecimal(0));
+				return cardRepository.saveAndFlush(card);
+			}
+		}catch(Exception e) {
+			logger.error("Exception occurred while fetching card detail - " + e);
 		}
-	}
-
-	@Override
-	public Optional<Card> findById(long id) {
-		return cardRepository.findById(id);
+		
+		throw new InvalidCardNumberException("Entered card number is invalid!!");
 	}
 
 }

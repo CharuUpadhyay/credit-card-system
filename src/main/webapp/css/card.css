@@ -1,0 +1,54 @@
+
+/* Card Layout helpers
+----------------------------------*/
+
+.cardLabel {
+  font-weight: bold;
+  display: block;
+  width: 150px;
+  text-align: left;
+}
+.input-border {
+    border: 1px solid #ccc!important;
+}
+.card-input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 40%;
+}
+
+.button {
+    background-color: #4CAF9D;
+    border: none;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#existinCard th {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #abb1b8;
+    color: black;
+}
+
+#existinCard {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#existinCard td, #existinCard th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#existinCard tr:nth-child(even){background-color: #f2f2f2;}
+
+#existinCard tr:hover {background-color: #ddd;}

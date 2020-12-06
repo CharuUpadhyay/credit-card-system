@@ -2,6 +2,10 @@ package com.example;
 
 public final class Utility {
 
+	/**
+	 * @param number
+	 * @return
+	 */
 	public static boolean isValidCard(String number) {
 		if (number == null)
 			return false;
